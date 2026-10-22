@@ -1,0 +1,21 @@
+# Build output
+target/
+out/
+
+# IDE / OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local portfolio data (personal; also never commit backups the app creates)
+data/
+*.csv
+*.bak
+*.tmp
+*.bad-*
+
+# Secrets and logs
+.env
+*.log

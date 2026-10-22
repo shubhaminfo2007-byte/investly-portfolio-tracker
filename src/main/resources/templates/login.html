@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Investly</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="login-wrap">
+  <section class="panel login-card">
+    <div class="login-brand"><span class="brand-mark">I</span><span>investly<small>PORTFOLIO TRACKER</small></span></div>
+    <h1>Welcome</h1>
+    <p class="subtitle">Enter a username to open your portfolio. A new username starts an empty portfolio.</p>
+    <div th:if="${error}" class="alert error" role="alert"><span>!</span><span th:text="${error}"></span></div>
+    <form action="/login" method="post" class="login-form">
+      <label for="username">Username</label>
+      <input id="username" name="username" placeholder="e.g. shubham" required maxlength="32" pattern="[A-Za-z0-9_-]+" autocomplete="username" autofocus>
+      <button class="primary-btn" type="submit">Continue <span>→</span></button>
+    </form>
+    <p class="login-note">Letters, numbers, “-” and “_” only. There is no password, so don't use this for private data.</p>
+  </section>
+</main>
+</body>
+</html>
